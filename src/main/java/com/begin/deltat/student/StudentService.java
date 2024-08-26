@@ -1,26 +1,21 @@
 package com.begin.deltat.student;
 
-import java.time.LocalDate;
 import java.util.List;
 
+import org.springframework.stereotype.Service;
+
+// @Component
+@Service
 public class StudentService {
     
-    public List<Student> getStudents() {
-        		return List.of(
-			new Student(
-				1L,
-				"Mike",
-				"mike@gmail.com",
-				LocalDate.of(2000, 9, 3),
-				21
-			), 
-			new Student(
-				2L,
-				"Victor",
-				"victor@gmail.com",
-				LocalDate.of(2005, 2, 6),
-				19
-			)
-		);
+	private final StudentRepository studentRepository;
+
+	public StudentService(StudentRepository studentRepository) {
+		this.studentRepository = studentRepository;
+	}
+
+
+		public List<Student> getStudents() {
+        return studentRepository.findAll();
     }
 }

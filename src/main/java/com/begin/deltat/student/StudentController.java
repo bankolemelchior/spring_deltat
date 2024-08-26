@@ -1,6 +1,5 @@
 package com.begin.deltat.student;
 
-import java.time.LocalDate;
 import java.util.List;
 
 import org.springframework.web.bind.annotation.GetMapping;
@@ -14,7 +13,8 @@ public class StudentController {
     private final StudentService studentService;
 
     public StudentController(StudentService studentService) {
-        this.studentService = studentService;
+        // this.studentService = new StudentService();
+        this.studentService =  studentService;
     }
 
     @GetMapping
