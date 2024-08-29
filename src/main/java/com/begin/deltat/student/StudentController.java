@@ -39,12 +39,6 @@ public class StudentController {
         studentService.deleteStudent(studentId);
     }
 
-    // @PutMapping("path/{id}")
-    // public String putMethodName(@PathVariable String id, @RequestBody String entity) {
-    //     //TODO: process PUT request
-        
-    //     return entity;
-    // }
     @PutMapping("/{studentId}")
     public void updateStudent(
         @PathVariable Long studentId, 

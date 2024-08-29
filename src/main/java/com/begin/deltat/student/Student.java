@@ -22,7 +22,7 @@ public class Student {
         allocationSize = 1
     )
     @GeneratedValue(
-        strategy = GenerationType.SEQUENCE,
+        strategy = GenerationType.IDENTITY,
         generator = "student_seq"
     )
     private Long id;
